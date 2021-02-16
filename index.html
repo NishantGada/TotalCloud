@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Cloud</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Total Cloud</h2>
+
+    <section>
+        <div id="left-column">
+            <ul id="employeeList">
+                <li id="employee" onclick="selector()" ><a href="#"><img src="./img/employee 1.jpeg" alt=""> <span>Apple</span></a></li>
+                <li id="employee" onclick="selector()" ><a href="#"><img src="./img/employee 1.jpeg" alt=""> <span>Banana</span></a></li>
+                <li id="employee" onclick="selector()" ><a href="#"><img src="./img/employee 1.jpeg" alt=""> <span>Carrot</span></a></li>
+            </ul>
+        </div>
+        <div id="action-buttons">
+            <button id="assign" onclick="assign()"> Assign &nbsp; >> </button>
+            <button id="revoke" onclick="revoke()"> << &nbsp; Revoke </button>
+        </div>
+        <div id="right-column">
+            <ul id="assignedEmployees">
+
+            </ul>
+        </div>
+    </section>
+    
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
