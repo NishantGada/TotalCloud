@@ -38,6 +38,11 @@ nav div ul li a:hover {
 }
 
 @media screen and (max-width: 768px) {
+
+    nav {
+        box-shadow: 2px 2px 24px rgb(231, 231, 231);
+    }
+
     nav div {
         width: 80%;
         flex-direction: column;
