@@ -46,7 +46,10 @@ section {
     width: 100%;
     padding: 0 20px;
     margin: 10px 0;
-    /* background-color: rgb(230, 230, 230); */
+}
+
+#left-column ul li:hover, #right-column ul li:hover {
+    background-color: rgb(230, 230, 230);
 }
 
 #left-column ul li a, #right-column ul li a {
