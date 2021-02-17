@@ -3,40 +3,63 @@ let revokeBtn = document.getElementById('revoke');
 let employeeList = document.getElementById('employeeList')
 let assignedEmployees = document.getElementById('assignedEmployees');
 
+let selectedEmployeeList = []
+
 revokeBtn.style.opacity = 0.4;
 revokeBtn.style.pointerEvents = "none";
 
-function assign() {
-    let employee = document.getElementById('employee');
+function assign(e) {
+    e.classList.add('selected');
+}
 
-    console.log(employee.innerText);
+assignBtn.addEventListener('click', function () {
 
-    assignBtn.addEventListener('click', function () {
-        employee.remove();
+    let abc = document.getElementsByClassName('selected');
+     
+    console.log(abc);
+
+    while (abc.length > 0) {
 
         var li = document.createElement('li');
-        li.innerHTML = employee.innerHTML;
+        li.innerHTML = abc[0].innerHTML;
+        abc[0].remove();
         assignedEmployees.appendChild(li);
+
 
         revokeBtn.style.opacity = 1;
         revokeBtn.style.pointerEvents = "all";
-    })
-    // var li = document.createElement('li');
-    // li.innerHTML = employee.innerHTML;
-    // assignedEmployees.appendChild(li);
+    }
+    
+    let xyz = assignedEmployees.getElementsByTagName('li');
+    
+    for (var i=0; i<xyz.length; i++) {
+        xyz[i].onclick = function(e) {
+            e.target.parentElement.classList.add('selected_r');
+        }
+    }
+})
 
-    // revokeBtn.style.opacity = 1;
-    // revokeBtn.style.pointerEvents = "all";
-}
+revokeBtn.addEventListener('click', function() {
+    let abc = document.getElementsByClassName('selected_r');
+     
+    console.log(abc);
 
-function revoke() {
-    let employee = document.getElementById('employee');
+    while (abc.length > 0) {
+        var li = document.createElement('li');
+        li.innerHTML = abc[0].innerHTML;
+        abc[0].remove();
+        employeeList.appendChild(li);
 
-    employee.remove();
 
-    // assignedEmployees.remove();
+        assignBtn.style.opacity = 1;
+        assignBtn.style.pointerEvents = "all";
+    }
 
-    var li2 = document.createElement('li');
-    li2.innerHTML = employee.innerHTML;
-    employeeList.appendChild(li2);
-}
+    let xyz = employeeList.getElementsByTagName('li');
+    
+    for (var i=0; i<xyz.length; i++) {
+        xyz[i].onclick = function(e) {
+            e.target.parentElement.classList.add('selected');
+        }
+    }
+})
