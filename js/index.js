@@ -10,12 +10,13 @@ revokeBtn.style.pointerEvents = "none";
 
 function assign(e) {
     e.classList.add('selected');
+    e.style.backgroud = "lightgray"
 }
 
 assignBtn.addEventListener('click', function () {
 
     let abc = document.getElementsByClassName('selected');
-     
+
     console.log(abc);
 
     while (abc.length > 0) {
@@ -29,19 +30,19 @@ assignBtn.addEventListener('click', function () {
         revokeBtn.style.opacity = 1;
         revokeBtn.style.pointerEvents = "all";
     }
-    
+
     let xyz = assignedEmployees.getElementsByTagName('li');
-    
-    for (var i=0; i<xyz.length; i++) {
-        xyz[i].onclick = function(e) {
+
+    for (var i = 0; i < xyz.length; i++) {
+        xyz[i].onclick = function (e) {
             e.target.parentElement.classList.add('selected_r');
         }
     }
 })
 
-revokeBtn.addEventListener('click', function() {
+revokeBtn.addEventListener('click', function () {
     let abc = document.getElementsByClassName('selected_r');
-     
+
     console.log(abc);
 
     while (abc.length > 0) {
@@ -56,9 +57,9 @@ revokeBtn.addEventListener('click', function() {
     }
 
     let xyz = employeeList.getElementsByTagName('li');
-    
-    for (var i=0; i<xyz.length; i++) {
-        xyz[i].onclick = function(e) {
+
+    for (var i = 0; i < xyz.length; i++) {
+        xyz[i].onclick = function (e) {
             e.target.parentElement.classList.add('selected');
         }
     }

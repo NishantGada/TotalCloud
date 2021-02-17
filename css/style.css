@@ -23,6 +23,7 @@ section {
     max-height: 100%;
     width: 80%;
     margin: auto;
+    padding: 30px;
     margin-bottom: 100px;
 
     display: flex;
@@ -31,7 +32,7 @@ section {
 }
 
 #left-column, #right-column {
-    width: 30%;
+    width: 35%;
     /* border: 1px solid black; */
     box-shadow: 2px 2px 25px rgb(207, 207, 207);
     min-height: 400px;
@@ -109,6 +110,7 @@ section button {
 
     section {
         flex-direction: column;
+        width: 100%;
     }
 
     #left-column, #right-column {

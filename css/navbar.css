@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 30px 0;
+    margin-bottom: 50px;
+    box-shadow: 2px 2px 24px lightgray;
+}
+
+nav div {
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div h3 {
+    font-size: 30px;
+    color: black;
+}
+
+nav div ul {
+    display: flex;
+}
+
+nav div ul li a {
+    color: #3178EB;
+    font-weight: bold;
+    padding: 0 20px;
+}
+
+nav div ul li a:hover {
+    color: black;
+    transition: 0.2s;
+}
+
+@media screen and (max-width: 768px) {
+    nav div {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    nav div ul {
+        margin: 30px 0 10px 0;
+    }
+}
