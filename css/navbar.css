@@ -5,6 +5,10 @@
 nav {
     padding: 30px 0;
     margin-bottom: 50px;
+    
+}
+
+nav:hover {
     box-shadow: 2px 2px 24px lightgray;
 }
 
