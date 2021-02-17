@@ -1,6 +1,6 @@
 # TotalCloud
 
-Feature:-
+Features:
 
 1. You can select an employee and click on assign to assign it a task. 
 2. You can also multi-select employees and assign them all together. 
