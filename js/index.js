@@ -10,7 +10,6 @@ revokeBtn.style.pointerEvents = "none";
 
 function assign(e) {
     e.classList.add('selected');
-    e.style.backgroud = "lightgray"
 }
 
 assignBtn.addEventListener('click', function () {
