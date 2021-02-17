@@ -89,6 +89,14 @@ section button {
     background: lightgray;
 }
 
+footer {
+    background: #3178EB;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
 @media screen and (max-width: 360px) {
 
     section {
